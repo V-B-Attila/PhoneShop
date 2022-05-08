@@ -1,0 +1,26 @@
+main {
+  text-align: center;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+  font-weight: bold
+}
+
+.phone-container {
+  display: inline-flex;
+  flex-direction: column;
+
+  width: 60%;
+  margin-inline: auto;
+
+  gap: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  .phone-container {
+    width: 90%;
+  }
+}

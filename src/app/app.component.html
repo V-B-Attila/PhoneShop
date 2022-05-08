@@ -1,0 +1,24 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer>
+    <mat-toolbar color="primary">
+      <div class="title">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div>PhoneShop</div>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+          <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
+          <li *ngIf="!loggedIn"><a routerLink="/register">Register</a></li>
+          <li *ngIf="loggedIn"><a routerLink="/profile">Profile</a></li>
+          <li *ngIf="loggedIn"><a (click)="logout()" style="cursor: pointer">Logout</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-navigation (isOpenEmit)="toggleSidenav($event, drawer)"></app-navigation>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

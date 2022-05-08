@@ -1,0 +1,45 @@
+<div *ngIf="!inputMode" class="phone">
+  <img src="{{phone.imageurl}}" alt="{{phone.name}}-img" />
+
+  <div class="info">
+    <span class="name">{{phone.name | uppercase}}</span>
+    <span class="price" [ngStyle]="{'font-weight': (phone.price < 100000) ? 'initial' : 'bolder'}">price: {{phone.price | addSpacing}}</span>
+    <span class="storage" [ngClass]="(phone.storage.length > 5) ? 'bgCyan' : ''">storage: {{phone.storage}}</span>
+    <span class="uid">uid: {{phone.uid}}</span>
+
+    <mat-divider></mat-divider>
+
+    <div class="button-wrap">
+      <button mat-raised-button color="primary">Buy</button>
+      <button (click)="toggleInputMode()" mat-raised-button color="accent">Edit</button>
+    </div>
+  </div>
+
+  <mat-icon class="delete-icon" (click)="deletePhone(phone)" [inline]="true">
+    delete
+  </mat-icon>
+</div>
+
+<div *ngIf="inputMode" class="phone">
+  <img src="{{phone.imageurl}}" alt="{{phone.name}}-img" />
+
+    <div class="info">
+      <form [formGroup]="editForm" (ngSubmit)="savePhone(phone)">
+        Name: <input formControlName="name" /> <br/>
+        Storage: <input formControlName="storage" /> <br/>
+        Price: <input formControlName="price" /> <br/>
+
+        <mat-divider></mat-divider>
+
+        <div class="button-wrap">
+          <button type="submit" mat-raised-button color="primary">Save</button>
+          <button (click)="toggleInputMode()" mat-raised-button color="accent">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+
+  <mat-icon class="delete-icon" (click)="deletePhone(phone)" [inline]="true">
+    delete
+  </mat-icon>
+</div>

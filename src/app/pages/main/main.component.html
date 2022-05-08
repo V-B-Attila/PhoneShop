@@ -1,0 +1,10 @@
+<main>
+  <h1>PhoneShop</h1>
+
+  <div class="phone-container">
+    <div *ngFor="let phone of phones; let i = index" class="wrap">
+      <app-phone [phone]="phone"></app-phone>
+    </div>
+  </div>
+</main>
+

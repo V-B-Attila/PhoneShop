@@ -1,0 +1,39 @@
+.mat-toolbar {
+  //background-color: #DFDEEE;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.title-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-items {
+  display: flex;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  gap: 1em; // 1em = 16px
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media screen and (max-width: 500px) {
+  .navigation-items {
+    display: none;
+  }
+}

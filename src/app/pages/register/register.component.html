@@ -1,0 +1,32 @@
+<div class="form-wrapper">
+  <h2>Register</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" name="email" matInput placeholder="Enter your email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Enter your name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput placeholder="Enter your password" type="password">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password again</mat-label>
+      <input formControlName="passwordRe" matInput placeholder="Enter your password" type="password">
+    </mat-form-field>
+
+    <div class="button-wrap">
+      <button *ngIf="!loading" mat-raised-button color="primary">Register</button>
+      <mat-progress-bar *ngIf="loading"></mat-progress-bar>
+    </div>
+    
+  </form>
+
+</div>

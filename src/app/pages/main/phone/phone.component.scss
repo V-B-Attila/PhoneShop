@@ -1,0 +1,73 @@
+.phone {
+  background-color: white;
+  display: flex;
+  padding: 1em 2em;
+
+  border-radius: 1em;
+
+  box-shadow: 0 2px 1px rgba(128, 128, 128, 0.49);
+
+  img {
+    width: 14em;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    mat-divider {
+      margin-top: auto;
+    }
+
+    .name {
+      font-size: larger;
+      font-weight: bold;
+    }
+
+
+    .button-wrap {
+      margin-top: auto;
+      display: flex;
+      gap: 1em;
+    }
+  }
+
+  .delete-icon {
+    color: red;
+    font-size: 1.5em;
+    position: relative;
+    right: -1.7em;
+    top: -1em;
+    cursor: pointer;
+  }
+
+  .bgCyan {
+    background-color: cyan;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .phone {
+    flex-direction: column;
+
+    justify-items: center;
+    align-content: center;
+
+    gap: 1em;
+
+    img {
+      margin-inline: auto;
+    }
+
+    .info {
+      height: 10em;
+      margin-inline: auto;
+    }
+
+    .delete-icon {
+      right: 0;
+      top: 0.5em;
+    }
+  }
+}

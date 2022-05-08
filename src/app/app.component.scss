@@ -1,0 +1,19 @@
+.title {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 0.7em;
+}
+
+mat-toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+

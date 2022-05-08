@@ -1,0 +1,23 @@
+<div class="form-wrapper">
+  <h2>Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="Enter your email">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput placeholder="Enter your password" type="password">
+    </mat-form-field>
+
+
+    <div class="button-wrap">
+      <button *ngIf="!loading" mat-raised-button color="primary">Login</button>
+      <mat-spinner *ngIf="loading" [diameter]="40"></mat-spinner>
+    </div>
+
+  </form>
+
+</div>

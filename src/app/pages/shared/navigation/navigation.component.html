@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <div class="nav-wrap">
+    <div class="title-wrap">
+      <!-- TODO Output() drawer.toggle()-->
+      <button mat-icon-button (click)="toggleDrawer()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a routerLink="/">PhoneShop</a>
+    </div>
+      <ul class="navigation-items">
+        <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
+        <li *ngIf="!loggedIn"><a routerLink="/register">Register</a></li>
+        <li *ngIf="loggedIn"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="loggedIn"><a (click)="logout()" style="cursor: pointer">Logout</a></li>
+      </ul>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "phoneshop-2d3c3": {
+      "hosting": {
+        "PhoneShop": [
+          "phoneshop-2d3c3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "phoneshop-2d3c3"
+  }
+}

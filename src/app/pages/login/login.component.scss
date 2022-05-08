@@ -1,0 +1,37 @@
+.form-wrapper {
+  width: 30%;
+
+  margin-top: 0.5em;
+  margin-inline: auto;
+
+  padding: 1em;
+
+  border: 1px solid blue;
+  border-radius: 0.5em;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1em;
+
+  height: 3em;
+}
+
+
+@media screen and (max-width: 800px) {
+  .form-wrapper {
+    width: 90%;
+  }
+}
